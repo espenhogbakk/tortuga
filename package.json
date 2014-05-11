@@ -1,0 +1,24 @@
+{
+  "name": "pirater",
+  "description": "A node.js client for ThePirateBay.",
+  "tags": [
+    "The Pirate Bay",
+    "torrent",
+    "client",
+    "scraper",
+    "simple",
+    "util",
+    "utility"
+  ],
+  "version": "0.1.0",
+  "author": "Espen Høgbakk <espen@hogbakk.no>",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/espenhogbakk/pirater.git"
+  },
+  "bugs": {
+    "url": "http://github.com/espenhogbakk/pirater/issues"
+  },
+  "license": "MIT",
+  "main": "index.js"
+}
