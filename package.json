@@ -28,4 +28,7 @@
     "mocha": "*",
     "chai": ">=1.9.1"
   },
+  "script": {
+    "test": "make test"
+  }
 }
