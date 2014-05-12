@@ -1,5 +1,4 @@
-require('./test_helper');
-
+var fixture = require('./test_helper').fixture;
 var config = require('../config');
 var expect = require('chai').expect;
 var nock = require('nock');
