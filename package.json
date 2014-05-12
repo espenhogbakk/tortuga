@@ -23,10 +23,13 @@
   "license": "MIT",
   "main": "index.js",
   "dependencies": {
+    "requests": ">=2.34.0",
+    "cheerio": ">=0.16.0"
   },
   "devDependencies": {
     "mocha": "*",
-    "chai": ">=1.9.1"
+    "chai": ">=1.9.1",
+    "nock": ">=0.30.1"
   },
   "scripts": {
     "test": "make test"
