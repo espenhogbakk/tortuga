@@ -1,5 +1,6 @@
 require('./test_helper');
 
+var config = require('../config');
 var expect = require('chai').expect;
 var nock = require('nock');
 
@@ -108,7 +109,7 @@ describe('Torrent', function() {
 
   describe('.find_by_id', function() {
     it('should return a Torrent object from the given id', function() {
-      var scope = nock('http://thepiratebay.se')
+      var scope = nock(config.base_url)
         .get('/torrent/9982925')
         .replyWithFile(200, __dirname + '/fixtures/torrent.html');
 
