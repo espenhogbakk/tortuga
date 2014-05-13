@@ -1,7 +1,8 @@
-var fixture = require('./test_helper').fixture;
-var config = require('../config');
 var expect = require('chai').expect;
 var nock = require('nock');
+
+var fixture = require('./test_helper').fixture;
+var config = require('../config');
 
 var Torrent = require('../lib/torrent.js');
 
