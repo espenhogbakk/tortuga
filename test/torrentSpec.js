@@ -123,6 +123,7 @@ describe('Torrent', function() {
       fixture('torrent.html', function(html) {
         var results_hash = Torrent.parse_torrent_page(html)
         expect(results_hash.title).to.equal('Ubuntu 14.04 64 bit');
+        expect(results_hash.magnet).to.equal('magnet:?xt=urn:btih:4d753474429d817b80ff9e0c441ca660ec5d2450&dn=Ubuntu+14.04+64+bit&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker-ccc.de%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337');
       });
     });
   });
