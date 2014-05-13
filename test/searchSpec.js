@@ -24,7 +24,7 @@ describe('Search', function() {
   });
 
   describe('.results', function() {
-    it('should return an array of Torrent object from the given query', function() {
+    it('should return an array of Torrent object from the given query', function(done) {
       var scope = nock(config.base_url)
         .get('/search/ubuntu/0/99/0')
         .replyWithFile(200, __dirname + '/fixtures/search.html');
@@ -32,6 +32,7 @@ describe('Search', function() {
       search.results(function(results) {
         expect(results).to.be.a('array');
         expect(results).to.have.length(30);
+        done();
       })
     });
   });
