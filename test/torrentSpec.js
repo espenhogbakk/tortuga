@@ -3,12 +3,11 @@ var nock = require('nock');
 
 var fixture = require('./test_helper').fixture;
 
-var pirater = require('../index');
-var config = pirater.config;
-var Torrent = pirater.Torrent;
+var config = require('../index').config;
+var Torrent = require('../lib/pirater/torrent');
 
 describe('Torrent', function() {
-  var torrent = new pirater.Torrent({
+  var torrent = new Torrent({
     'id': 9982925,
     'title': 'Ubuntu 14.04 64 bit',
     'category': 'Applications',
