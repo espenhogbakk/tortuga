@@ -21,7 +21,7 @@
     "url": "http://github.com/espenhogbakk/pirater/issues"
   },
   "license": "MIT",
-  "main": "index.js",
+  "main": "./index",
   "dependencies": {
     "requests": ">=2.34.0",
     "cheerio": ">=0.16.0"

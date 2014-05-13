@@ -2,12 +2,13 @@ var expect = require('chai').expect;
 var nock = require('nock');
 
 var fixture = require('./test_helper').fixture;
-var config = require('../config');
 
-var Torrent = require('../lib/torrent.js');
+var pirater = require('../index');
+var config = pirater.config;
+var Torrent = pirater.Torrent;
 
 describe('Torrent', function() {
-  var torrent = new Torrent({
+  var torrent = new pirater.Torrent({
     'id': 9982925,
     'title': 'Ubuntu 14.04 64 bit',
     'category': 'Applications',
