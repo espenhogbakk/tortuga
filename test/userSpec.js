@@ -14,7 +14,7 @@ describe('User', function() {
 
   describe('.profileUrl', function() {
     it('should return the profile url', function() {
-      expect(user.profileUrl).to.equal(config.base_url + '/user/foo');
+      expect(user.profileUrl).to.equal(config.baseUrl + '/user/foo');
     });
   });
 });

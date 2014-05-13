@@ -108,7 +108,7 @@ describe('Torrent', function() {
 
   describe('.find_by_id', function() {
     it('should return a Torrent object from the given id', function() {
-      var scope = nock(config.base_url)
+      var scope = nock(config.baseUrl)
         .get('/torrent/9982925')
         .replyWithFile(200, __dirname + '/fixtures/torrent.html');
 

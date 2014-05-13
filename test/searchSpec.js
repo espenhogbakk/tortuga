@@ -25,7 +25,7 @@ describe('Search', function() {
 
   describe('.results', function() {
     it('should return an array of Torrent object from the given query', function(done) {
-      var scope = nock(config.base_url)
+      var scope = nock(config.baseUrl)
         .get('/search/ubuntu/0/99/0')
         .replyWithFile(200, __dirname + '/fixtures/search.html');
 
