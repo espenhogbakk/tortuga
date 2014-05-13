@@ -13,7 +13,7 @@ describe('Torrent', function() {
     'magnet': 'magnet:?xt=urn:btih:4d753474429d817b80ff9e0c441ca660ec5d2450&dn=Ubuntu+14.04+64+bit&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker-ccc.de%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337',
     'seeders': 108,
     'leechers': 14,
-    'uploader': 'http://thepiratebay.se/user/fulanodetal1234/',
+    'uploader': 'fulanodetal1234',
     'files': 1,
     'size': 1010827264,
     'date': '2014-04-17 18:08:20',
@@ -65,7 +65,7 @@ describe('Torrent', function() {
 
   describe('.uploader', function() {
     it('should return the uploader', function() {
-      expect(torrent.uploader).to.equal('http://thepiratebay.se/user/fulanodetal1234/');
+      expect(torrent.uploader).to.equal('fulanodetal1234');
     });
   });
 
@@ -123,7 +123,16 @@ describe('Torrent', function() {
       fixture('torrent.html', function(html) {
         var results_hash = Torrent.parse_torrent_page(html)
         expect(results_hash.title).to.equal('Ubuntu 14.04 64 bit');
+        expect(results_hash.files).to.equal(1);
+        expect(results_hash.size).to.equal(1010827264);
+        expect(results_hash.date).to.be.a('date');
+        expect(results_hash.uploader).to.equal('fulanodetal1234');
+        expect(results_hash.seeders).to.equal(94);
+        expect(results_hash.leechers).to.equal(10);
+        expect(results_hash.comments).to.equal(0);
+        expect(results_hash.hash).to.equal('4D753474429D817B80FF9E0C441CA660EC5D2450');
         expect(results_hash.magnet).to.equal('magnet:?xt=urn:btih:4d753474429d817b80ff9e0c441ca660ec5d2450&dn=Ubuntu+14.04+64+bit&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker-ccc.de%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337');
+        //expect(results_hash.category).to.equal(categories.APPLICATIONS)
       });
     });
   });
