@@ -9,7 +9,6 @@ describe('Torrent', function() {
   var torrent = new Torrent({
     'id': 9982925,
     'title': 'Ubuntu 14.04 64 bit',
-    'url': 'http://thepiratebay.se/torrent/9982925/Ubuntu_14.04_64_bit',
     'category': 'Applications',
     'magnet': 'magnet:?xt=urn:btih:4d753474429d817b80ff9e0c441ca660ec5d2450&dn=Ubuntu+14.04+64+bit&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker-ccc.de%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337',
     'seeders': 108,
@@ -42,7 +41,7 @@ describe('Torrent', function() {
 
   describe('.url', function() {
     it('should return the url', function() {
-      expect(torrent.url).to.equal('http://thepiratebay.se/torrent/9982925/Ubuntu_14.04_64_bit');
+      expect(torrent.url).to.equal('http://thepiratebay.se/torrent/9982925');
     });
   });
 
