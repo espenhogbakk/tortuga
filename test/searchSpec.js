@@ -11,9 +11,9 @@ describe('Search', function() {
 
   var search = new Search("ubuntu");
 
-  describe('.sort_type', function() {
+  describe('.sortType', function() {
     it('should have a default value', function() {
-      expect(search.sort_type).to.equal(sort.RELEVANCE);
+      expect(search.sortType).to.equal(sort.RELEVANCE);
     });
   });
 
