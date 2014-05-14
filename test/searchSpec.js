@@ -38,7 +38,7 @@ describe('Search', function() {
   });
 
   describe('._parseSearchPage', function() {
-    it('should return an array with Torrent objects', function() {
+    it('should return an array with Torrent objects', function(done) {
       fixture('search.html', function(html) {
         var results = search._parseSearchPage(html)
         expect(results).to.be.a('array');
@@ -50,7 +50,8 @@ describe('Search', function() {
         expect(result.seeders).to.equal(1);
         expect(result.leechers).to.equal(2);
         expect(result.magnet).to.equal('magnet:?xt=urn:btih:895649af5c8311d16a1857144d9be811bd59dfab&dn=Ubuntu+12.04+ReMastered+By+Linear_%7BCoderDISTRIBUTION%7D&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker-ccc.de%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337');
-        expect(result.category).to.equal(303)
+        expect(result.category).to.equal(303);
+        done();
       });
     });
   });

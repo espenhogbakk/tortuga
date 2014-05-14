@@ -121,7 +121,7 @@ describe('Torrent', function() {
   });
 
   describe('.parse_torrent_page', function() {
-    it('should return a hash with torrent data', function() {
+    it('should return a hash with torrent data', function(done) {
       fixture('torrent.html', function(html) {
         var results_hash = Torrent.parse_torrent_page(html)
         expect(results_hash.title).to.equal('Ubuntu 14.04 64 bit');
@@ -134,7 +134,8 @@ describe('Torrent', function() {
         expect(results_hash.comments).to.equal(0);
         expect(results_hash.hash).to.equal('4D753474429D817B80FF9E0C441CA660EC5D2450');
         expect(results_hash.magnet).to.equal('magnet:?xt=urn:btih:4d753474429d817b80ff9e0c441ca660ec5d2450&dn=Ubuntu+14.04+64+bit&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker-ccc.de%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337');
-        expect(results_hash.category).to.equal(303)
+        expect(results_hash.category).to.equal(303);
+        done();
       });
     });
   });
