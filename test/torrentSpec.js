@@ -107,7 +107,7 @@ describe('Torrent', function() {
   });
 
   describe('.findById', function() {
-    it('should return a Torrent object from the given id', function() {
+    it('should return a Torrent object from the given id', function(done) {
       var scope = nock(config.baseUrl)
         .get('/torrent/9982925')
         .replyWithFile(200, __dirname + '/fixtures/torrent.html');
@@ -115,6 +115,7 @@ describe('Torrent', function() {
       Torrent.findById(9982925, function(torrent) {
         expect(torrent.id).to.equal(9982925);
         expect(torrent.title).to.equal('Ubuntu 14.04 64 bit');
+        done();
       })
     });
   });
