@@ -1,5 +1,5 @@
 var expect = require('chai').expect;
-var utils = require('../lib/pirater/utils');
+var utils = require('../lib/tortuga/utils');
 
 describe('convertBytesToMegabytes()', function() {
   it('should convert bytes to megabytes', function() {

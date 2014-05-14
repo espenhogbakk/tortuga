@@ -1,5 +1,5 @@
 {
-  "name": "pirater",
+  "name": "tortuga",
   "version": "0.1.0",
   "description": "A node.js client for ThePirateBay.",
   "keywords": [
@@ -15,16 +15,17 @@
   "author": "Espen Høgbakk <espen@hogbakk.no>",
   "repository": {
     "type": "git",
-    "url": "http://github.com/espenhogbakk/pirater.git"
+    "url": "http://github.com/espenhogbakk/tortuga.git"
   },
   "bugs": {
-    "url": "http://github.com/espenhogbakk/pirater/issues"
+    "url": "http://github.com/espenhogbakk/tortuga/issues"
   },
   "license": "MIT",
   "main": "./index",
   "dependencies": {
     "requests": ">=2.34.0",
-    "cheerio": ">=0.16.0"
+    "cheerio": ">=0.16.0",
+    "zlib": ">=1.0.5"
   },
   "devDependencies": {
     "mocha": "*",

@@ -1,6 +1,6 @@
-# Pirater
+# Tortuga
 
-Pirater makes it really easy to interact with ThePirateBay.
+Tortuga makes it really easy to interact with ThePirateBay.
 
 Inspired by: https://github.com/clindsay107/Pirata
 
@@ -8,15 +8,15 @@ Inspired by: https://github.com/clindsay107/Pirata
 
 Install using npm:
 ```sh
-npm install pirater
+npm install tortuga
 ```
 
 ## Usage
 
 ```javascript
-var pirater = require('pirater');
+var tortuga = require('tortuga');
 
-pirater.search('Ubuntu', function(results) {
+tortuga.search('Ubuntu', function(results) {
   console.log(results);
 })
 
@@ -56,4 +56,4 @@ need to change the domain you are querying against. You can alter the
 
 ## License
 
-Pirater is available under the MIT license. See the LICENSE file for more info.
+Tortuga is available under the MIT license. See the LICENSE file for more info.

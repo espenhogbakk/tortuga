@@ -4,8 +4,8 @@ var nock = require('nock');
 var fixture = require('./test_helper').fixture;
 
 var config = require('../index').config;
-var sort   = require('../lib/pirater/sort');
-var Search = require('../lib/pirater/search');
+var sort   = require('../lib/tortuga/sort');
+var Search = require('../lib/tortuga/search');
 
 describe('Search', function() {
 

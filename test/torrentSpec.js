@@ -4,7 +4,7 @@ var nock = require('nock');
 var fixture = require('./test_helper').fixture;
 
 var config = require('../index').config;
-var Torrent = require('../lib/pirater/torrent');
+var Torrent = require('../lib/tortuga/torrent');
 
 describe('Torrent', function() {
   var torrent = new Torrent({
