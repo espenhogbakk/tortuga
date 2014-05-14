@@ -1,16 +1,14 @@
 {
   "name": "tortuga",
   "version": "0.1.0",
-  "description": "A node.js client for ThePirateBay.",
+  "description": "A node.js client for The Pirate Bay.",
   "keywords": [
     "pirate bay",
     "piratebay",
     "torrent",
     "client",
     "scraper",
-    "simple",
-    "util",
-    "utility"
+    "simple"
   ],
   "author": "Espen Høgbakk <espen@hogbakk.no>",
   "repository": {
@@ -23,9 +21,8 @@
   "license": "MIT",
   "main": "./index",
   "dependencies": {
-    "requests": ">=2.34.0",
-    "cheerio": ">=0.16.0",
-    "zlib": ">=1.0.5"
+    "request": ">=2.34.0",
+    "cheerio": ">=0.16.0"
   },
   "devDependencies": {
     "mocha": "*",
