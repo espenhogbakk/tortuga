@@ -1,6 +1,7 @@
 # Tortuga
 
 [![NPM](https://nodei.co/npm/tortuga.png)](https://nodei.co/npm/tortuga/)
+
 [![Code Climate](https://codeclimate.com/github/espenhogbakk/tortuga.png)](https://codeclimate.com/github/espenhogbakk/tortuga)
 [![Build Status](https://travis-ci.org/espenhogbakk/tortuga.svg?branch=master)](https://travis-ci.org/espenhogbakk/tortuga)
 
