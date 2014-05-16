@@ -2,10 +2,12 @@ REPORTER = dot
 
 test:
 	@NODE_ENV=test ./node_modules/.bin/mocha \
+		--recursive \
     --reporter $(REPORTER) \
 
 test-w:
 	@NODE_ENV=test ./node_modules/.bin/mocha \
+		--recursive \
     --reporter $(REPORTER) \
     --growl \
     --watch
