@@ -1,7 +1,7 @@
 var expect = require('chai').expect;
 
-var config = require('../index').config;
-var User = require('../lib/tortuga/user');
+var config = require('../../index').config;
+var User = require('../../lib/tortuga/user');
 
 describe('User', function() {
   var user = new User('foo');

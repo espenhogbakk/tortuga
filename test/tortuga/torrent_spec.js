@@ -1,10 +1,10 @@
 var expect = require('chai').expect;
 var nock = require('nock');
 
-var fixture = require('./test_helper').fixture;
+var fixture = require('../test_helper').fixture;
 
-var config = require('../index').config;
-var Torrent = require('../lib/tortuga/torrent');
+var config = require('../../index').config;
+var Torrent = require('../../lib/tortuga/torrent');
 
 describe('Torrent', function() {
   var torrent = new Torrent({
@@ -110,7 +110,7 @@ describe('Torrent', function() {
     it('should return a Torrent object from the given id', function(done) {
       var scope = nock(config.baseUrl)
         .get('/torrent/9982925')
-        .replyWithFile(200, __dirname + '/fixtures/torrent.html');
+        .replyWithFile(200, __dirname + '/../fixtures/torrent.html');
 
       Torrent.findById(9982925, function(torrent) {
         expect(torrent.id).to.equal(9982925);

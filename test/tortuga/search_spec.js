@@ -1,11 +1,11 @@
 var expect = require('chai').expect;
 var nock = require('nock');
 
-var fixture = require('./test_helper').fixture;
+var fixture = require('../test_helper').fixture;
 
-var config = require('../index').config;
-var sort   = require('../lib/tortuga/sort');
-var Search = require('../lib/tortuga/search');
+var config = require('../../index').config;
+var sort   = require('../../lib/tortuga/sort');
+var Search = require('../../lib/tortuga/search');
 
 describe('Search', function() {
 
@@ -27,7 +27,7 @@ describe('Search', function() {
     it('should return an array of Torrent object from the given query', function(done) {
       var scope = nock(config.baseUrl)
         .get('/search/ubuntu/0/99/0')
-        .replyWithFile(200, __dirname + '/fixtures/search.html');
+        .replyWithFile(200, __dirname + '/../fixtures/search.html');
 
       search.results(function(results) {
         expect(results).to.be.a('array');
