@@ -37,11 +37,13 @@ describe('Search', function() {
     });
 
     for (var type in sort) {
-      it('should be sorted in descending order relative to ' + type, function (done) {
-        var s = new Search({query: "Ubuntu", sortType: type});
-        expect(s.sortType).to.equal(sort[type]);
-        done();
-      });
+      (function sortTest(type){
+        it('should be sorted in descending order relative to ' + type, function (done) {
+          var s = new Search({query: "Ubuntu", sortType: type});
+          expect(s.sortType).to.equal(sort[type]);
+          done();
+        });
+      })(type)
     }
   });
 
