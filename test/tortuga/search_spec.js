@@ -33,7 +33,14 @@ describe('Search', function() {
         expect(results).to.be.a('array');
         expect(results).to.have.length(30);
         done();
-      })
+      });
+    });
+
+    sort.forEach(function (type) {
+      it('should be sorted in descending order relative to ' + type, function (done) {
+        var s = new Search({query: "Ubuntu", sortType: type});
+        expect(s.sortType).to.equal(sort[type]);
+      });
     });
   });
 
