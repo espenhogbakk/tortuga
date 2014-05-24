@@ -120,10 +120,10 @@ describe('Torrent', function() {
     });
   });
 
-  describe('.parse_torrent_page', function() {
+  describe('.parseTorrentPage', function() {
     it('should return a hash with torrent data', function(done) {
       fixture('torrent.html', function(html) {
-        var results_hash = Torrent.parse_torrent_page(html)
+        var results_hash = Torrent.parseTorrentPage(html)
         expect(results_hash.title).to.equal('Ubuntu 14.04 64 bit');
         expect(results_hash.files).to.equal(1);
         expect(results_hash.size).to.equal(1010827264);
