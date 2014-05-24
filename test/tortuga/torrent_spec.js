@@ -120,6 +120,23 @@ describe('Torrent', function() {
     });
   });
 
+  describe('.reload', function() {
+    it('should update params', function(done) {
+      var scope = nock(config.baseUrl)
+        .get('/torrent/9982925')
+        .replyWithFile(200, __dirname + '/../fixtures/torrent.html');
+
+      var torrent = new Torrent({
+        'id': 9982925
+      });
+
+      torrent.reload(function() {
+        expect(Object.keys(torrent.params).length).to.equal(12);
+        done();
+      })
+    });
+  });
+
   describe('.parseTorrentPage', function() {
     it('should return a hash with torrent data', function(done) {
       fixture('torrent.html', function(html) {
