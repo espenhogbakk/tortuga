@@ -131,7 +131,8 @@ describe('Torrent', function() {
       });
 
       torrent.reload(function() {
-        expect(Object.keys(torrent.params).length).to.equal(12);
+        expect(torrent.title).to.equal('Ubuntu 14.04 64 bit');
+        expect(torrent.size).to.equal(964);
         done();
       })
     });
