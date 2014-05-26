@@ -1,6 +1,6 @@
 {
   "name": "tortuga",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A node.js client for The Pirate Bay.",
   "keywords": [
     "pirate bay",
