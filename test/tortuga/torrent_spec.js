@@ -16,7 +16,7 @@ describe('Torrent', function() {
     'leechers': 14,
     'uploader': 'fulanodetal1234',
     'files': 1,
-    'size': 1010827264,
+    'bytes': 1010827264,
     'date': '2014-04-17 18:08:20',
     'comments': 0,
     'hash': '4D753474429D817B80FF9E0C441CA660EC5D2450'
@@ -144,7 +144,7 @@ describe('Torrent', function() {
         var results_hash = Torrent.parseTorrentPage(html)
         expect(results_hash.title).to.equal('Ubuntu 14.04 64 bit');
         expect(results_hash.files).to.equal(1);
-        expect(results_hash.size).to.equal(1010827264);
+        expect(results_hash.bytes).to.equal(1010827264);
         expect(results_hash.date).to.be.a('date');
         expect(results_hash.uploader).to.equal('fulanodetal1234');
         expect(results_hash.seeders).to.equal(94);
