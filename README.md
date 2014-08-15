@@ -46,6 +46,12 @@ tortuga.search('Ubuntu', function(results) {
   }
   ...
 ]
+
+//Filtering:
+tortuga.search({query: 'Ubuntu', sortType: 'SEEDERS', category: 'APPLICATIONS'} function(results) {
+  console.log(results);
+})
+
 ```
 
 ## Configuration
