@@ -51,14 +51,13 @@ describe('Search', function() {
       (function sortTest(cat){
         it('should be sorted by ' + cat, function (done) {
           var s = new Search({query: "Ubuntu", categories: cat});
-          console.log(s.categories);
           expect(s.categories).to.equal(categories[cat]);
           done();
         });
       })(cat)
     }
-
   });
+
   describe('._parseSearchPage', function() {
     it('should return an array with Torrent objects', function(done) {
       fixture('search.html', function(html) {
