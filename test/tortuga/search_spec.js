@@ -5,6 +5,7 @@ var fixture = require('../test_helper').fixture;
 
 var config = require('../../index').config;
 var sort   = require('../../lib/tortuga/sort');
+var categories   = require('../../lib/tortuga/categories');
 var Search = require('../../lib/tortuga/search');
 
 describe('Search', function() {
@@ -45,8 +46,19 @@ describe('Search', function() {
         });
       })(type)
     }
-  });
 
+    for (var cat in categories) {
+      (function sortTest(cat){
+        it('should be sorted by ' + cat, function (done) {
+          var s = new Search({query: "Ubuntu", categories: cat});
+          console.log(s.categories);
+          expect(s.categories).to.equal(categories[cat]);
+          done();
+        });
+      })(cat)
+    }
+
+  });
   describe('._parseSearchPage', function() {
     it('should return an array with Torrent objects', function(done) {
       fixture('search.html', function(html) {
