@@ -20,7 +20,7 @@ describe('Search', function() {
 
   describe('.categories', function() {
     it('should have a default value', function() {
-      expect(search.categories[0]).to.equal(0);
+      expect(search.category[0]).to.equal('0');
     });
   });
 
@@ -50,8 +50,8 @@ describe('Search', function() {
     for (var cat in categories) {
       (function sortTest(cat){
         it('should be sorted by ' + cat, function (done) {
-          var s = new Search({query: "Ubuntu", categories: cat});
-          expect(s.categories).to.equal(categories[cat]);
+          var s = new Search({query: "Ubuntu", category: cat});
+          expect(s.category).to.equal(categories[cat]);
           done();
         });
       })(cat)
