@@ -52,6 +52,11 @@ tortuga.search({query: 'Ubuntu', sortType: 'SEEDERS', category: 'APPLICATIONS'} 
   console.log(results);
 })
 
+//Top 100 by category
+tortuga.top({categories: 'GAMES'}, function(results) {
+  console.log(results);
+});
+
 ```
 
 ## Configuration
